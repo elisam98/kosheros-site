@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+li.logo {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#logo-container {
+  height: 57px;
+}
+
+#splash {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.section {
+	font-family: 'Raleway', sans-serif;
+/*
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+*/
+min-height: 80vh;
+background-blend-mode: screen;
+}
+
+.logo-image {
+	max-height: 64px!important;
+	padding: 5px 0!important;
+/*
+	margin-left: 10px!important;
+*/
+}
+
+.hero-text {
+	font-family: 'Oswald', sans-serif;
+	font-size: 6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.hero-subtext {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.hero-text-mobile {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.flow-text {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+#splash {
+	height: 75vh;
+	background: grey url('../images/main_splash.png') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#phones {
+	background: lightgrey url('../images/appstore-image.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#endorsements {
+	background: lightgrey url('../images/endorsement_image.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: space-between;
+}
+.flex-center {
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+.flex-start {
+	justify-content: space-around;
+	align-items: center;
+}
+
+.blurb {
+	width: 20rem;
+	padding: 2rem;
+	display: block;
+	background-color: lightgrey;
+	border-radius: 10px;
+    opacity: 0.75;
+}
+.splash-image {
+	min-width: 30vw;
+	height: auto;
+}
+
+.btn-floating {
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	z-index: 99;
+}
+.store-card {
+	width: 300px;
+}
+.ribbon {
+	position: absolute;
+	left: -5px; top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+}
+.ribbon span {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	width: 100px;
+	display: block;
+	background: #79A70A;
+	background: linear-gradient(#EE6E73 0%, #EE6E73 100%);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 19px; left: -21px;
+}
+.ribbon span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #EE6E73;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #EE6E73;
+}
+.ribbon span::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #EE6E73;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #EE6E73;
+}
+/* ecwid override */
+.form-control__button {
+	background-color: #333!important;
+	color: #fff!important;
+}

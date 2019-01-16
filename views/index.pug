@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  #splash.section
+    .row.container.hide-on-small-only
+      p
+        span.hero-text
+          | Your Mobile Future.
+          br
+          | Secured.
+        br
+        span.hero-subtext The most trusted and secure solution for kosher smartphones.
+    .row.container.show-on-small.hide-on-med-and-up
+      //
+        img.logo-image(src='/images/new_safetelecom.svg', alt='KosherOS by SafeTelecom')
+      p
+        span.hero-text-mobile
+          | Your Mobile Future.
+          br
+          | Secured.
+        br
+        span.hide The most trusted and secure solution for kosher smartphones.
+    .row.container.center
+      .button-group
+        a.btn.btn-large.waves-effect.waves-light(href='/shop') Shop Online
+        a.btn.btn-large.waves-effect.waves-light.hide-on-small-only(href='/retail') Find a Retailer

@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    meta(name='description', content='KosherOS by SafeTelecom | Premium Kosher Smartphone Technology')
+    meta(name='keywords', content='KosherOS, SafeTelecom, Premium Kosher Smartphone, App Store, Kosher Phones, Browser-Free, No Browser, kosher os android, apps kosher smartphone, the kosher os')
+    link(rel='icon', sizes='32x32', href='/icons/favicon-32x32.png')
+    link(rel='icon', sizes='16x16', href='/icons/favicon-16x16.png')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Raleway|Oswald|Material+Icons')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    link(rel='stylesheet', href='//use.fontawesome.com/releases/v5.0.10/css/all.css')
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='/js/matomo.js')
+    script(src='//code.jquery.com/jquery-3.3.1.min.js')
+  body
+    header
+      .navbar-fixed
+        nav
+          .teal.lighten-2.nav-wrapper.row
+            //
+              .col.s12
+              a(href='/')
+                img.responsive-img(src='/images/new_safetelecom_white.svg', alt='KosherOS by SafeTelecom')
+            a.sidenav-trigger.show-on-large(href='#', data-target='slide-out')
+              i.material-icons menu
+            a.brand-logo(href='/')
+              img(style='height:64px;padding:0.5rem 0;', src='/images/new_safetelecom_white.svg', alt='KosherOS by SafeTelecom')
+            ul#nav-mobile.right.hide-on-med-and-down
+              li
+                a(href='/') Home
+              li
+                a(href='/kosher-os') KosherOS
+              li
+                a(href='/shop') Shop Online
+              li
+                a(href='/about') About
+              li
+                a(href='/app-stores') App Stores
+              li
+                a(href='/retail') Store Locator
+              //
+                <li><a href="#endorsements">Endorsements</a></li>
+    //
+      nav
+        .nav-wrapper
+          .row.container
+            a.flow-text(href='/app-stores') NEW! Mehadrin Talk and Text Only Option! >>
+    ul#slide-out.sidenav
+      li.logo
+        a#logo-container(href='/')
+          img.responsive-img(src='/images/new_safetelecom_path.svg', alt='KosherOS by SafeTelecom')
+      li
+        a(href='/') Home
+      li
+        a(href='/kosher-os') KosherOS
+      li
+        a(href='/shop') Shop Online
+      li
+        a(href='/about') About
+      li
+        a(href='/app-stores') App Stores
+      li
+        a(href='/retail') Store Locator
+    main
+      block content
+    footer.page-footer
+      include footer
+    include scripts

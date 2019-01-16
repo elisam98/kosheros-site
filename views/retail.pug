@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    #retail.section
+        .row.container
+            h2.header store locator
+            p
+                | Visit one of these better smartphone retailers today to see a demo of KosherOS in action and for a full-service purchasing experience.
+        .row.container
+            #storeListing
+    script.
+        $(function() {
+            $('.modal').modal()
+            $.get(`https://updates.safetelecom.net/api/retailers`, data => {
+                data.forEach(retailer => {
+                    if (retailer.name === "Blank") {} else {
+                        console.log(retailer)
+                        $('#storeListing').append(`
+                            <div class="col s12 m6 l4">
+                                <div class="card grey lighten-5">
+                                    <div class="card-image">
+                                        <a target=”_blank" href="https://www.google.com/maps/place/${retailer.mailAddress ? retailer.mailAddress + ", " + retailer.mailCity + ", " + retailer.mailState + " " + retailer.mailPostal : ''}">
+                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=${retailer.mailAddress ? retailer.mailAddress + ", " + retailer.mailCity + ", " + retailer.mailState + " " + retailer.mailPostal : ''}&zoom=16&scale=2&size=300x200&maptype=roadmap&key=AIzaSyBQ0zPTvWByRVuCqwLqJg6vh2Ur-OXIK_4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:%7C${retailer.mailAddress ? retailer.mailAddress + ", " + retailer.mailCity + ", " + retailer.mailState + " " + retailer.mailPostal : ''}">
+                                        </a>
+                                    </div>
+                                    <div class="card-content" style="height: 20rem">
+                                        <h3 class="card-title">${retailer.name}</h3>
+                                        ${retailer.mailAddress ? retailer.mailAddress + "<br>" : ''}
+                                        ${retailer.mailAddress ? retailer.mailCity + ", " + retailer.mailState + " " + retailer.mailPostal + "<br>" : ''}
+                                        ${retailer.email ? retailer.email + "<br>" : ''}
+                                        ${retailer.website ? '<a href="' + retailer.website + '">' + retailer.website + '</a><br>' : ''}
+                                        ${retailer.phone ? retailer.phone + "<br>" : ''}
+                                        ${retailer.notes ? retailer.notes + "<br>" : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    }
+                })
+            })
+        })
+

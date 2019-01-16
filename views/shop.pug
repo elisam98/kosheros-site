@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    #shop.section.grey.lighten-3
+        .row.container
+            h2.header shop
+            p Choose from our selection of fully secured smartphones. To see a listing of App Store options, 
+                a(href='/app-stores') click here.
+            p
+                b All device and App Store package purchases are subject to SafeTelecom's Terms & Conditions that are displayed at checkout. It is the customer's responsibility to read and understand all the terms and conditions before purchasing a device and selecting an App Store package.
+            //
+                .card.red.lighten-1
+                    .card-content.white-text
+                        span.card-title Please Note
+                        h6
+                            | We will not be processing any orders from 9/15/2018 through 10/4/2018. If you would like a device sooner, please visit a 
+                        a.black-text(href='/retail') retail location
+                            | .
+        .row.container
+            .card
+                .card-content
+                    script(data-cfasync='false', type='text/javascript', src='//app.ecwid.com/script.js?13769457&data_platform=code&data_date=2018-04-27', charset='utf-8')
+                    script(type='text/javascript').
+                        xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-13769457", "defaultCategoryId=32423558");
+                    #my-store-13769457
+        .row.container
+            p
+                | SafeTelecom partners with a number of kosher phone retailers across the NY Metro area.
+                br
+                | Prefer to see a demo or purchase in-store? Please visit one of these fine 
+                a(href='/retail') retail partners
+                | .

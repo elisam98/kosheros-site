@@ -1,0 +1,132 @@
+extends layout
+
+block content
+    #stores.section.grey.lighten-3
+        .row.container
+            h2.header app stores
+            .flex.flex-start
+                p
+                    | All SafeTelecom phones ship with essential apps included for free. These include Calculator, Calendar, Clock, Gmail, Messages and Recorder.
+                    br
+                    | When ordering your new SafeTelecom phone, you may also choose from one of the following add-on App Store packages:
+            .flex.flex-center
+                .card.store-card
+                    .ribbon
+                        span NEW!
+                    .card-content
+                        h4.center SafeTelecom Mehadrin
+                        hr
+                        h5.blue-text - $10.00
+                        hr
+                        ul
+                        li
+                            i.fa.fa-check.teal-text
+                            |  No App Store
+                        li
+                            i.fa.fa-check.teal-text
+                            |  No Email
+                        li
+                            i.fa.fa-check.teal-text
+                            |  Our Most Kosher Option!
+                .card.store-card
+                    .card-content
+                        h4.center SafeTelecom Basic
+                        hr
+                        h5.blue-text included
+                        hr
+                        ul
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Torah
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Navigation
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Weather
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Judaism Tools
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Inludes 45+ Apps
+                        .center
+                            button.btn.apps-modal-trigger(data-store='safetelecombasic') View Full Listing
+                .card.store-card
+                    .card-content
+                        h4.center SafeTelecom Plus
+                        hr
+                        h5.blue-text + $25.00
+                        hr
+                        ul
+                            li
+                                i.fa.fa-check.teal-text
+                                |  All Basic Apps
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Banking
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Money Mangement
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Local Shopping
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Includes 100+ Apps
+                        .center
+                            button.btn.apps-modal-trigger(data-store='safetelecomplus') View Full Listing
+                .card.store-card
+                    .card-content
+                        h4 SafeTelecom Premium
+                        hr
+                        h5.blue-text + $50.00
+                        hr
+                        ul
+                            li
+                                i.fa.fa-check.teal-text
+                                |  All Plus and Basic Apps
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Cloud Sync and Storage
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Business
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Printing
+                            li
+                                i.fa.fa-check.teal-text
+                                |  Includes 115+ Apps
+                        .center
+                            button.btn.apps-modal-trigger(data-store='safetelecompremium') View Full Listing
+        .row.container.center
+            p
+                b All device and App Store package purchases are subject to SafeTelecom's Terms & Conditions that are displayed at checkout. It is the customer's responsibility to read and understand all the terms and conditions before purchasing a device and selecting an App Store package.
+            p
+            strong
+                | WhatsApp is available in any of these stores for an additional one-time fee of $25.00.
+            p
+            | NOTE: These store configurations are only available from our website.
+            br
+            | Please see your 
+            a(href='/retail') nearest retail location
+            |  for location-specific app stores.
+    #app-list-modal.modal.modal-fixed-footer
+        .modal-content
+            .preloader-wrapper.active
+                .spinner-layer.spinner-red-only
+                    .circle-clipper.left
+                        .circle
+                    .gap-patch
+                        .circle
+                    .circle-clipper.right
+                        .circle
+        .modal-footer
+            a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Close
+    script.
+        $('.apps-modal-trigger').click(e => {
+            let storename = $(e.target).data("store")
+            M.Modal.init(document.querySelector('.modal')).open()
+            $('#app-list-modal .modal-content').html(`<iframe height="100%" width="100%" style="border:none;" src="https://updates.safetelecom.net/views/stores/${storename}"></iframe>`)
+        })
