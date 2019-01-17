@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.btn {
+  margin: 0 1rem 0 0;
+}
+
 li.logo {
   text-align: center;
   margin-top: 1rem;
@@ -22,22 +26,13 @@ li.logo {
 
 .section {
 	font-family: 'Raleway', sans-serif;
-/*
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
-	align-items: center;
-*/
-min-height: 80vh;
-background-blend-mode: screen;
+  min-height: 80vh;
+  background-blend-mode: screen;
 }
 
 .logo-image {
 	max-height: 64px!important;
 	padding: 5px 0!important;
-/*
-	margin-left: 10px!important;
-*/
 }
 
 .hero-text {
@@ -73,20 +68,6 @@ background-blend-mode: screen;
 	-o-background-size: cover;
 	background-size: cover;
 }
-#phones {
-	background: lightgrey url('../images/appstore-image.jpg') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-#endorsements {
-	background: lightgrey url('../images/endorsement_image.jpg') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
 .flex {
 	display: flex;
 	flex-flow: row wrap;
@@ -102,25 +83,11 @@ background-blend-mode: screen;
 	align-items: center;
 }
 
-.blurb {
-	width: 20rem;
-	padding: 2rem;
-	display: block;
-	background-color: lightgrey;
-	border-radius: 10px;
-    opacity: 0.75;
-}
 .splash-image {
 	min-width: 30vw;
 	height: auto;
 }
 
-.btn-floating {
-	position: fixed;
-	bottom: 50px;
-	right: 30px;
-	z-index: 99;
-}
 .store-card {
 	width: 300px;
 }
