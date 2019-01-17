@@ -27,5 +27,8 @@ router.get('/retail', function(req, res, next) {
 router.get('/sitemap.xml', function(req, res, next) {
   res.sendFile('./public/sitemap.xml');
 });
+router.get('/store_sitemap.xml', function(req, res, next) {
+  res.sendFile('./public/store_sitemap.xml');
+});
 
 module.exports = router;
