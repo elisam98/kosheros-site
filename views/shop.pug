@@ -30,7 +30,7 @@ block content
                     script(type='text/javascript').
                         xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-13769457", "defaultCategoryId=32423558");
                     script.
-                        var currentUrl = window.location.href;Ecwid.OnPageLoaded.add(function() {console.log('location changed: ' + currentUrl);_paq.push(['setReferrerUrl', currentUrl]);_paq.push(['setCustomUrl', currentUrl]);_paq.push(['setDocumentTitle', document.title]);_paq.push(['deleteCustomVariables', 'page']);_paq.push(['setGenerationTimeMs', 0]);_paq.push(['trackPageView']);var content = document;_paq.push(['MediaAnalytics::scanForMedia', content]);_paq.push(['FormAnalytics::scanForForms', content]);_paq.push(['trackContentImpressionsWithinNode', content]);_paq.push(['enableLinkTracking'])});
+                        Ecwid.OnPageLoaded.add(function() {var currentUrl = window.location.href;console.log('location changed: ' + currentUrl);_paq.push(['setReferrerUrl', currentUrl]);_paq.push(['setCustomUrl', currentUrl]);_paq.push(['setDocumentTitle', document.title]);_paq.push(['deleteCustomVariables', 'page']);_paq.push(['setGenerationTimeMs', 0]);_paq.push(['trackPageView']);var content = document;_paq.push(['MediaAnalytics::scanForMedia', content]);_paq.push(['FormAnalytics::scanForForms', content]);_paq.push(['trackContentImpressionsWithinNode', content]);_paq.push(['enableLinkTracking'])});
                     #my-store-13769457
         .row.container
             p
