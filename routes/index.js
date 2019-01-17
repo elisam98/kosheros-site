@@ -21,4 +21,8 @@ router.get('/retail', function(req, res, next) {
   res.render('retail', { title: 'Store Locator | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
 
+router.get('/sitemap.xml', function(req, res, next) {
+  res.sendFile('./public/sitemap.xml');
+});
+
 module.exports = router;
