@@ -11,6 +11,9 @@ router.get('/kosher-os', function(req, res, next) {
 router.get('/shop', function(req, res, next) {
   res.render('shop', { title: 'Shop Online | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
+router.get('/shop/*', function(req, res, next) {
+  res.render('shop', { title: 'Shop Online | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
+});
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About Us | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
