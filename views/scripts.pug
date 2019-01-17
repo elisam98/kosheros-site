@@ -1,7 +1,11 @@
 script(src='//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-script(async, src='/js/olark.js')
 script.
-    (function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='f8a048a732f102f69efce44d73c72a1b91765794ccc07ef83397d37815bffa67';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/')
+    window.$crisp=[];window.CRISP_WEBSITE_ID="8a9b7633-ec5e-4ee0-99f0-6fe39b09eb46";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+//
+    script(async, src='/js/olark.js')
+//
+    script.
+        (function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='f8a048a732f102f69efce44d73c72a1b91765794ccc07ef83397d37815bffa67';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/')
 script.
     $(() => {
         $('.sidenav').sidenav();
