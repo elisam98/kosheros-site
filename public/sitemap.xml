@@ -9,33 +9,48 @@
 
 <url>
   <loc>https://thekosheros.com/</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thekosheros.com/kosher-os</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thekosheros.com/shop</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thekosheros.com/about</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thekosheros.com/app-stores</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thekosheros.com/retail</loc>
-  <lastmod>2019-01-17T00:54:59+00:00</lastmod>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thekosheros.com/app-stores/safetelecombasic</loc>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thekosheros.com/app-stores/safetelecomplus</loc>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thekosheros.com/app-stores/safetelecompremium</loc>
+  <lastmod>2019-02-04T14:49:32+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

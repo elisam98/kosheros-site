@@ -25,7 +25,7 @@ li.logo {
 }
 
 .section {
-	font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
   min-height: 80vh;
   background-blend-mode: screen;
 }
@@ -62,7 +62,7 @@ li.logo {
 
 #splash {
 	height: 75vh;
-	background: grey url('../images/main_splash.png') no-repeat center center fixed; 
+	background: grey url('https://res.cloudinary.com/safetelecom/image/upload/f_auto,q_auto/images/main_splash.png') no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -77,6 +77,7 @@ li.logo {
 .flex-center {
 	flex-flow: row wrap;
 	align-items: stretch;
+	justify-content: center;
 }
 .flex-start {
 	justify-content: space-around;
@@ -90,6 +91,7 @@ li.logo {
 
 .store-card {
 	width: 300px;
+	margin: 1rem;
 }
 .ribbon {
 	position: absolute;

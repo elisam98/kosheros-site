@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const fetch = require('node-fetch')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,8 +21,18 @@ router.get('/about', function(req, res, next) {
 router.get('/app-stores', function(req, res, next) {
   res.render('app-stores', { title: 'App Stores | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
+router.get('/app-stores/:storeName', function(req, res, next) {
+  fetch(`http://updates.safetelecom.net/api/v2/stores/${req.params.storeName}`)
+    .then(res => res.json())
+    .then(json => {
+        res.render('store-listing', { title: 'App Stores | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology', store: json, timestamp: new Date(Date.now()) });
+    })
+});
 router.get('/retail', function(req, res, next) {
   res.render('retail', { title: 'Store Locator | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
+});
+router.get('/support', function(req, res, next) {
+  res.render('support', { title: 'Support | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
 
 router.get('/sitemap.xml', function(req, res, next) {
