@@ -35,6 +35,15 @@ router.get('/support', function(req, res, next) {
   res.render('support', { title: 'Support | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology' });
 });
 
+router.get('/status', function(req, res, next) {
+  fetch(`https://api.trello.com/b/22l4ovPz/system-updates.json`)
+    .then(res => res.json())
+    .then(json => {
+        console.log(json)
+        res.render('status', { title: 'System Status | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology', cards: json.cards });
+    })
+});
+
 router.get('/sitemap.xml', function(req, res, next) {
   res.sendFile('./public/sitemap.xml');
 });

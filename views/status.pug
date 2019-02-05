@@ -1,0 +1,17 @@
+extends layout
+block content
+  .section.grey.lighten-3
+    .row.container
+       h2.header System Status
+       p These are the latest status updates and advisories on the KosherOS system. Please feel free to reach out with any questions or concerns.
+    .row.container
+      each card in cards
+        .col.s12
+         .card
+           .card-content(style="max-height:125px")
+             .row
+               .col.s2.valign-wrapper
+                 .collection-item.avatar
+                   img.circle(src=card.attachments[0].url)
+               .col.s10.valign-wrapper
+                 p= card.desc
