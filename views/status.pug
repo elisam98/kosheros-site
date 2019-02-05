@@ -6,12 +6,12 @@ block content
        p These are the latest status updates and advisories on the KosherOS system. Please feel free to reach out with any questions or concerns.
     .row.container
       each card in cards
-        .col.s12
-         .card
-           .card-content(style="max-height:125px")
-             .row
-               .col.s2.valign-wrapper
-                 .collection-item.avatar
-                   img.circle(src=card.attachments[0].url)
-               .col.s10.valign-wrapper
-                 p= card.desc
+        .card
+          .card-content.row
+            .col.s3.l2
+              .center-align.valign-wrapper
+                div
+                  img.responsive-img(src=card.attachments[0].previews[1].url)
+            .col.s9.l10
+              h5.title= card.name
+              p= card.desc
