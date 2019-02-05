@@ -129,21 +129,3 @@ block content
             | Please see your 
             a(href='/retail') nearest retail location
             |  for location-specific app stores.
-    #app-list-modal.modal.modal-fixed-footer
-        .modal-content
-            .preloader-wrapper.active
-                .spinner-layer.spinner-red-only
-                    .circle-clipper.left
-                        .circle
-                    .gap-patch
-                        .circle
-                    .circle-clipper.right
-                        .circle
-        .modal-footer
-            a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Close
-    script.
-        $('.apps-modal-trigger').click(e => {
-            let storename = $(e.target).data("store")
-            M.Modal.init(document.querySelector('.modal')).open()
-            $('#app-list-modal .modal-content').html(`<iframe height="100%" width="100%" style="border:none;" src="https://updates.safetelecom.net/views/stores/${storename}"></iframe>`)
-        })

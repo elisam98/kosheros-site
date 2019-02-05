@@ -1,0 +1,27 @@
+extends layout
+block content
+  style.
+    .app-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      background-blend-mode: screen;
+    }
+    .app {
+      margin: 1rem;
+      max-width: 125px;
+      height: 225px;
+      overflow: hidden;
+      text-align: center;
+    }
+  .container.app-container
+    .row.center-align
+      h3= store.name
+      h5= store.apps.length + ' Apps'
+  .container.app-container
+    each app in store.apps
+      .app
+        img(src='https://res.cloudinary.com/safetelecom/image/upload/f_auto,q_auto/icons/' + app.metadata.icon style="height: auto; max-width: 125px;")
+        br
+        .app-name= app.metadata.name
