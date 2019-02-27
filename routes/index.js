@@ -50,5 +50,8 @@ router.get('/sitemap.xml', function(req, res, next) {
 router.get('/store_sitemap.xml', function(req, res, next) {
   res.sendFile('./public/store_sitemap.xml');
 });
+router.get('/mishpacha', function(req, res, next) {
+  res.render('index', { title: 'Home | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology', ref: 'mishpacha' });
+});
 
 module.exports = router;
