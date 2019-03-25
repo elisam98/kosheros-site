@@ -1,6 +1,7 @@
 //
   script(src='//code.jquery.com/jquery-3.3.1.min.js')
 script(src='//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+script(src='//desk.zoho.com/portal/api/feedbackwidget/275963000000083478?orgId=666838731&displayType=popout')
 script.
     window.$crisp=[];window.CRISP_WEBSITE_ID="8a9b7633-ec5e-4ee0-99f0-6fe39b09eb46";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
 //
@@ -8,5 +9,9 @@ script.
         (function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='f8a048a732f102f69efce44d73c72a1b91765794ccc07ef83397d37815bffa67';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/')
 script.
     $(() => {
-        $('.sidenav').sidenav();
+        $('.sidenav').sidenav()
+        var url = document.location.href
+        if (url.includes('mishpacha')) {
+            console.log('Thanks for following our link from Mishpacha!')
+        }
     })

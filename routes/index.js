@@ -60,7 +60,7 @@ router.get('/store_sitemap.xml', (req, res, next) => {
 })
 
 router.get('/mishpacha', (req, res, next) => {
-  res.render('index', { title: 'Home | KosherOS by SafeTelecom | Premium Kosher Smartphone Technology', ref: 'mishpacha' })
+  res.redirect('/?utm_source=magazine&utm_campaign=mishpacha_winter19')
 })
 
 module.exports = router
